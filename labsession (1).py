@@ -10,17 +10,18 @@ Original file is located at
 try:
 
  std_name = str(input("Enter student name: "))
+ course = str(input("Please enter your course: "))
  classes_Held = int(input("Enter number of classes held: "))
  classes_attended = int(input("Enter number of classes attended: "))
 
  attendence_percentage = (classes_Held / classes_attended) * 100
 
  if attendence_percentage >= 75:
-    print("Student is allowed to sit in exam")
+    print("Student is allowed to sit for", course, "exam")
     print("Attendence percentage is: ", attendence_percentage)
  else:
-    print("Student is not allowed to sit in exam")
+    print("Student is not allowed to sit for", course, "exam")
     print("Attendence percentage is: ", attendence_percentage)
 
 except ValueError:
-    print("Invalid input. Please enter valid numbers.")
+    print("Invalid input. Please enter valid numbers.") 
